@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Mi portafolio {% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+    <div class="left">
+        <h1>Soy Desarrollador</h1>
+        <h1>Jordin Rosario</h1>
+        <p>Me gusta el manejo de los datos crear, limpiar y sacar conclusiones con ellos.</p>
+        <p class="asd">Mis herramientas de trabajo son Python, MySQL, Pandas, NumPy, Matplotlib, PowerBI, Excel</p>
+        <a href="#contacto" class="btn">Contactame</a>
+    </div>
+    <div class="rigt">
+        <img src="{{ url_for('static', filename = 'big-data.png') }}" width="600px" alt=""/>
+    </div>
+    </div>
+</div>
+{% include 'portfolio/section-first.html'%}
+{% include 'portfolio/section-second.html'%}
+{% include 'portfolio/section-third.html'%}
+
+
+{% endblock %}

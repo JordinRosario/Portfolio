@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock %} - portafolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!------------------BARRA NAVEGACION----------------------->
+    <header>
+        <div class="logo">JORDIN ROSARIO</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('portfolio.index') }}">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------BARRA NAVEGACION----------------------->
+    
+    <section>{% block content %}{% endblock %}</section>
+    <div class="footer">
+        <div class="center full-width">
+            <div class="row">
+                <h3>Contactame</h3>
+            </div>
+        </div>
+        <div class="center full-width">
+            <div class="row">
+                <p>O tambien puedes seguirme en mis redes sociales</p>
+            </div>
+        </div>
+        <div class="center full-width social-links">
+            <div class="row">
+                <a href="https://twitter.com/JordinRosario" target="_blank"><img  class="social"  width="30" src="{{ url_for('static',filename='twitter.png') }}" alt=""></a>
+                <a href="https://www.linkedin.com/in/jordin-c-682047137/" target="_blank"><img  class="social"  width="30" src="{{ url_for('static',filename='linkedin.png') }}" alt=""></a>
+                <a href="https://www.instagram.com/jordionfiree/" target="_blank"><img  class="social"  width="30" src="{{ url_for('static',filename='instagram.png') }}" alt=""></a>
+
+            </div>
+        </div>
+        <div class="made-with">
+            <div class="row">
+                <p>Hecho con amor ❤ por Jordin Rosario</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
